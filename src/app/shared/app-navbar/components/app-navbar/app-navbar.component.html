@@ -1,4 +1,4 @@
-<header class="bg-white border-gray-200">
+<header class="bg-white p-2 border-gray-200">
   <!-- Top announcement bar -->
   <!-- <div
     class="flex sm:flex-row flex-col justify-between items-center space-y-2 sm:space-y-0 bg-[#F7F7F7] sm:px-6 md:px-8 lg:px-12 xl:px-16 py-4 pb-4">
@@ -21,11 +21,10 @@
   </div> -->
 
   <!-- Main header content -->
-  <div
-    class="flex md:flex-row justify-between items-start md:items-center space-y-4 md:space-y-0 sm:px-3 md:px-4 lg:px-6 xl:px-8 pt-2">
+  <div class="flex md:flex-row justify-between items-start lg:items-center space-y-4 md:space-y-0 sm:px-3 md:px-4 lg:px-6 xl:px-8 py-2">
     <!-- Logo -->
     <div class="flex flex-shrink-0 pt-2 sm:pr-6" >
-      <img src="/assets/img/mutawir-logo.jpg" alt="Company Logo" class="w-full h-auto max-h-20 object-contain cursor-pointer" routerLink="/">
+      <img src="/assets/img/mutawir-logo.jpg" alt="Company Logo" class="w-full h-auto max-h-16 lg:max-h-20 object-contain cursor-pointer" routerLink="/">
       <div class="p-3">
         <h1 class="font-montserrat font-black text-4xl text-center">Mutawir</h1>
       </div>
@@ -38,7 +37,7 @@
           <a
             [routerLink]="item.link"
             routerLinkActive="active-nav-link"
-            class="px-4 py-3 rounded-2xl font-montserrat font-semibold hover:text-gray-600 text-2xl"
+            class="px-4 py-3 rounded-2xl font-montserrat font-semibold hover:text-gray-600 text-xl"
           >
             {{ item.label }}
           </a>
@@ -47,7 +46,7 @@
     </nav>
 
     <!-- Mobile menu button - Shown on lg breakpoint and below -->
-    <div class="lg:hidden flex justify-end items-center px-4 w-full">
+    <div class="lg:hidden flex justify-end items-center p-4 h-full">
       <button
         type="button"
         class="flex items-center focus:outline-none"
@@ -131,12 +130,12 @@
   </div> -->
 
   <!-- Mobile menu - Hidden by default -->
-  <div class="z-50 bg-white shadow-md mt-0 px-2 py-2 rounded-2xl w-[100%]" [class.hidden]="!isMobileMenuOpen">
-    <div class="flex flex-col space-y-3">
+  <div class="z-50 bg-white shadow-md rounded-2xl w-[100%]" [class.hidden]="!isMobileMenuOpen">
+    <div class="flex flex-col">
           <a
             *ngFor="let item of navItems"
             [routerLink]="item.link"
-            class="px-3 py-3 rounded-md font-montserrat font-semibold hover:text-gray-600 text-xl transition-colors duration-200"
+            class="hover:bg-gray-300 px-3 py-4 rounded-2xl hover:rounded-2xl overflow-hidden font-montserrat font-semibold hover:text-gray-600 text-lg md:text-xl whitespace-nowrap transition-colors duration-200"
             routerLinkActive="active-nav-link"
             [routerLinkActiveOptions]="{exact: true}"
             (click)="isMobileMenuOpen = false">
