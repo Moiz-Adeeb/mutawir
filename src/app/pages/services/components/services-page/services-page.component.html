@@ -6,7 +6,7 @@
   </div>
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-[10%] h-[80%] overflow-y-auto custom-scroll">
     <ng-container class="flex justify-between" *ngFor="let item of services">
-      <div class="flex flex-col justify-between items-center space-y-4 py-8" [routerLink]="item.link">
+      <div class="flex flex-col justify-between items-center space-y-4 py-8">
         <img [srcset]=item.img alt="item.label" class="peer hover:shadow-[0_10px_100px_2px] hover:shadow-slate-600 rounded-[40px] sm:rounded-[50px] w-[70%] object-cover aspect-[4/3] transition-all">
         <p class="font-verdana text-white text-2xl text-center peer-hover:scale-105 transition-transform duration-300">
           {{item.label}}
@@ -15,3 +15,5 @@
     </ng-container>
   </div>
 </div>
+
+<!-- Todo: Implement these pages of each service in Line 07 [routerLink]="item.link" -->
